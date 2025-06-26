@@ -12,3 +12,9 @@ jobs:
       - name: Say hello
         run: |
           echo "Hello World!"
+
+      - name: now it is
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
+      - name: Directory content
+        run: ls -l
