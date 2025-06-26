@@ -14,7 +14,10 @@ jobs:
           echo "Hello World!"
 
       - name: now it is
-        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+        run: |
+          date=$(date +'%Y-%m-%d')
+          echo "Today is $date"
+          echo "date=$date" >> $GITHUB_OUTPUT
 
       - name: Directory content
         run: ls -l
