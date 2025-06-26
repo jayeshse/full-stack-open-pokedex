@@ -14,7 +14,7 @@ jobs:
           echo "Hello World!"
 
       - name: now it is
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
 
       - name: Directory content
         run: ls -l
