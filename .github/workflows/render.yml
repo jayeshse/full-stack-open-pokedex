@@ -8,6 +8,9 @@ jobs:
     name: Deploy to Render
     runs-on: ubuntu-latest
     steps:
+      - name: Check secret presence
+        run: 'echo "Service ID: ${{ secrets.RENDER_SERVICE_ID }}"'
+
       - name: Trigger deployment
         uses: sws2apps/render-deployment@main #consider using pin for dependabot auto update
         with:
